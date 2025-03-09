@@ -34,6 +34,10 @@ export default function Home() {
         <motion.div {...fadeInUp}>
           <Contact />
         </motion.div>
+        <motion.hr className="my-12 border-t border-primary/20" {...fadeInUp} />
+        <motion.div {...fadeInUp} id="resume">
+          {/* Your Resume component will go here */}
+        </motion.div>
       </main>
       <Footer />
     </div>

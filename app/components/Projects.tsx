@@ -4,32 +4,10 @@ import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import { projects } from "@/data/index"
+import Link from "next/link"
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "CityConnect",
-      description: "CityConnect is an app that connects citizens with their local government, making it easier to report issues, share ideas, and engage with the community.",
-      websiteUrl: "https://comp1800-bby19.web.app/",
-      githubUrl: "https://github.com/bluedelaw/CityConnect",
-      imageUrl: "/placeholder.svg?height=300&width=400",
-    },
-    {
-      title: "café de A",
-      description: "A website built for a local Hong Kong cafe in Richmond, BC. The website is built using React and Tailwind CSS.",
-      websiteUrl: "https://cafedea.ca",
-      githubUrl: "https://github.com/bluedelaw/cafedeA",
-      imageUrl: "/placeholder.svg?height=300&width=400",
-    },
-    {
-      title: "DanielLaw",
-      description: "Personal Portfolio Website built using Next.js and Tailwind CSS.",
-      websiteUrl: "https://project3.com",
-      githubUrl: "https://github.com/yourusername/project3",
-      imageUrl: "/placeholder.svg?height=300&width=400",
-    },
-  ]
-
   return (
     <section id="projects" className="py-12">
       <h2 className="text-3xl font-bold mb-6 text-primary">My Projects</h2>
@@ -41,8 +19,8 @@ export default function Projects() {
                 <Image
                   src={project.imageUrl || "/placeholder.svg"}
                   alt={`Background for ${project.title}`}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                   <CardHeader>
@@ -53,11 +31,17 @@ export default function Projects() {
               <CardContent className="flex-grow bg-gradient-to-br from-secondary/10 to-secondary/5">
                 <CardDescription className="mb-4">{project.description}</CardDescription>
                 <div className="space-x-2">
-                  <Button asChild>
-                    <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
-                      Visit Site
-                    </a>
-                  </Button>
+                  {project.hasDetailsPage ? (
+                    <Button asChild>
+                      <Link href={project.detailsUrl || "#"}>View Details</Link>
+                    </Button>
+                  ) : (
+                    <Button asChild>
+                      <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+                        Visit Site
+                      </a>
+                    </Button>
+                  )}
                   <Button variant="outline" asChild>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       View Source
@@ -72,5 +56,4 @@ export default function Projects() {
     </section>
   )
 }
-
 

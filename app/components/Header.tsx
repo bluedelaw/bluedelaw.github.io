@@ -29,9 +29,9 @@ export default function Header() {
         </motion.h1>
         <nav>
           <ul className="flex space-x-4">
-            {["about", "projects", "skills", "contact"].map((item) => (
+            {["about", "projects", "skills", "contact", "resume"].map((item) => (
               <motion.li key={item} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                <Link href={`#${item}`}>
+                <Link href={item === "resume" ? "/resume" : `#${item}`}>
                   <Button variant={scrolled ? "ghost" : "default"}>
                     {item.charAt(0).toUpperCase() + item.slice(1)}
                   </Button>
