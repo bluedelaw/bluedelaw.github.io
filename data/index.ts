@@ -20,7 +20,7 @@ export const projects = [
     description: "Personal Portfolio Website built using Next.js and Tailwind CSS.",
     githubUrl: "https://github.com/bluedelaw/bluedelaw.github.io",
     imageUrl: "/portfolioPicture.jpg?height=300&width=300",
-    sourceOnly: true, // Flag to indicate only show source button
+    sourceOnly: false, // Flag to indicate only show source button
   },
   {
     title: "Waitlist App",
@@ -28,7 +28,7 @@ export const projects = [
       "A waitlist management application for restaurants to efficiently manage customer queues and reservations. Features include real-time updates, SMS notifications, and analytics.",
     hasDetailsPage: false, // Flag to indicate this project has a details page
     detailsUrl: "/projects/waitlist-app", // URL to the details page
-    githubUrl: "https://github.com/bluedelaw/waitlist-app",
+    githubUrl: "https://github.com/bluedelaw/CafedeaWaitlist",
     imageUrl: "/Waitlist.png?height=300&width=300", // Replace with actual image
     sourceOnly: true, // Flag to indicate only show source button
   },

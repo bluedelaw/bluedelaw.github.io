@@ -2,14 +2,15 @@
   "name": "my-v0-project",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run export && touch out/.nojekyll",
-    "deploy": "gh-pages -d out -t true"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "export": "next build",
+  "predeploy": "npm run export && type nul > out/.nojekyll",
+  "deploy": "gh-pages -d out --dotfiles"
+},
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "^1.2.2",
