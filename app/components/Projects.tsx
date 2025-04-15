@@ -28,21 +28,24 @@ export default function Projects() {
                   </CardHeader>
                 </div>
               </div>
-              <CardContent className="flex-grow bg-gradient-to-br from-secondary/10 to-secondary/5">
-                <CardDescription className="mb-4">{project.description}</CardDescription>
+              <CardContent className="flex-grow bg-gradient-to-br from-secondary/10 to-secondary/5 pt-6">
+                {" "}
+                {/* Added pt-6 for top padding */}
+                <CardDescription className="mb-6">{project.description}</CardDescription> {/* Increased mb-4 to mb-6 */}
                 <div className="space-x-2">
-                  {project.hasDetailsPage ? (
-                    <Button asChild>
-                      <Link href={project.detailsUrl || "#"}>View Details</Link>
-                    </Button>
-                  ) : (
-                    <Button asChild>
-                      <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
-                        Visit Site
-                      </a>
-                    </Button>
-                  )}
-                  <Button variant="outline" asChild>
+                  {!project.sourceOnly &&
+                    (project.hasDetailsPage ? (
+                      <Button asChild>
+                        <Link href={project.detailsUrl || "#"}>View Details</Link>
+                      </Button>
+                    ) : (
+                      <Button asChild>
+                        <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+                          Visit Site
+                        </a>
+                      </Button>
+                    ))}
+                  <Button variant={project.sourceOnly ? "default" : "outline"} asChild>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       View Source
                     </a>
@@ -56,4 +59,3 @@ export default function Projects() {
     </section>
   )
 }
-

@@ -7,6 +7,7 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -21,6 +22,8 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  // Uncomment the following line if deploying to a project GitHub Pages site:
+  // basePath: '/repo-name',
 }
 
 mergeConfig(nextConfig, userConfig)

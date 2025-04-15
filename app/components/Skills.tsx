@@ -4,8 +4,31 @@ import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
 
 export default function Skills() {
-  const skills = ["React", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Node.js", "Git"]
-
+  const skills = [
+    "React",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "CSS",
+    "Node.js",
+    "Git",
+    "Express",
+    "Java",
+    "C",
+    "C++",
+    "R",
+    "SQL",
+    "Linux",
+    "Bootstrap",
+    "UI/UX Design",
+    "Graphic Design",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "Adobe XD",
+    "Eclipse",
+    "IntelliJ"
+  ];
   return (
     <section id="skills" className="py-12">
       <h2 className="text-3xl font-bold mb-6 text-primary">My Skills</h2>

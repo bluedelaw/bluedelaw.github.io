@@ -18,18 +18,19 @@ export const projects = [
   {
     title: "DanielLaw",
     description: "Personal Portfolio Website built using Next.js and Tailwind CSS.",
-    websiteUrl: "https://project3.com",
-    githubUrl: "https://github.com/yourusername/project3",
+    githubUrl: "https://github.com/bluedelaw/bluedelaw.github.io",
     imageUrl: "/portfolioPicture.jpg?height=300&width=300",
+    sourceOnly: true, // Flag to indicate only show source button
   },
   {
     title: "Waitlist App",
     description:
       "A waitlist management application for restaurants to efficiently manage customer queues and reservations. Features include real-time updates, SMS notifications, and analytics.",
-    hasDetailsPage: true, // Flag to indicate this project has a details page
+    hasDetailsPage: false, // Flag to indicate this project has a details page
     detailsUrl: "/projects/waitlist-app", // URL to the details page
-    githubUrl: "https://github.com/yourusername/waitlist-app",
-    imageUrl: "/placeholder.svg?height=300&width=400", // Replace with actual image
+    githubUrl: "https://github.com/bluedelaw/waitlist-app",
+    imageUrl: "/Waitlist.png?height=300&width=300", // Replace with actual image
+    sourceOnly: true, // Flag to indicate only show source button
   },
 ]
 
@@ -41,5 +42,5 @@ export type Project = {
   imageUrl: string
   hasDetailsPage?: boolean
   detailsUrl?: string
+  sourceOnly?: boolean
 }
-
