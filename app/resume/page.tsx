@@ -183,7 +183,7 @@ export default function ResumePage() {
                           cafedea.ca
                         </a>
                       </div>
-                      <p className="text-muted-foreground">Winter 2023</p>
+                      <p className="text-muted-foreground">Winter 2025</p>
                     </div>
                     <ul className="list-disc list-inside ml-4 mt-2 space-y-1">
                       <li>
