@@ -117,7 +117,7 @@ export default function ResumePage() {
                       <div>
                         <h3 className="text-xl font-semibold">Café De A | Software Developer / Server</h3>
                       </div>
-                      <p className="text-muted-foreground">Winter 2023</p>
+                      <p className="text-muted-foreground">Winter 2025</p>
                     </div>
                     <ul className="list-disc list-inside ml-4 mt-2 space-y-1">
                       <li>Utilized React and tailored CSS to build a responsive website showcasing menu items</li>
